@@ -3,7 +3,8 @@ const http = require('node:http');
 const PORTA = 3000;
 
 const server = http.createServer((req,res) => {
-console.log(`Requisicao recebida! ${req.method} ${req.url}`);
+console.log(`Requisicao recebida! ${req.method} ${req.url} `);
+console.log(`Data da requisicao ${new Date().toISOString()} ${req.url}`)
 
 res.statusCode = 201;
 res.st.Header('Content-Type', 'text/plain; chaset=utf-8')
